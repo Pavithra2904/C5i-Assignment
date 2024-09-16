@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transcription Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Transcription Results</h1>
+
+        <h2>Transcription:</h2>
+        <p>{{ transcription }}</p>
+
+        <h2>Topics:</h2>
+        <ul>
+            {% for topic in topics %}
+                <li>{{ topic }}</li>
+            {% endfor %}
+        </ul>
+
+        <h2>Sentiment:</h2>
+        <p>{{ sentiment }}</p>
+    </div>
+
+</body>
+</html>
